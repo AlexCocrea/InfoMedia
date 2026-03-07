@@ -93,7 +93,8 @@ namespace InfoMedia.API.Controllers
                 token = jwtToken,
                 fullName = user.FullName, 
                 email = user.Email,
-                role = user.Role
+                role = user.Role,
+                userId = user.Id
             });
         }
 

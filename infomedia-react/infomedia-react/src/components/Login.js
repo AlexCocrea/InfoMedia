@@ -3,7 +3,7 @@ import { loginUser } from "../utils/api";
 import { useNavigate, Link } from "react-router-dom";
 import './Login.css';
 
-export default function Login() {
+export default function Login({ setToken }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -15,8 +15,10 @@ export default function Login() {
       const data = await loginUser(email, password);
       localStorage.setItem("token", data.token);
       localStorage.setItem("fullName", data.fullName);
+      localStorage.setItem("userId", data.id); 
+      setToken(data.token); // actualizăm state-ul App.js
       setMessage("Login successful!");
-      navigate("/dashboard");
+      navigate("/feed");
     } catch (err) {
       setMessage("Login failed: Check your email and password!");
     }
