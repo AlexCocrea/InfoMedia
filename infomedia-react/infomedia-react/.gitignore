@@ -1,0 +1,18 @@
+@"
+# Visual Studio
+.vs/
+**/.vs/
+*.vsidx
+*.dtbcache.v2
+
+# .NET
+bin/
+obj/
+
+# React / Node
+node_modules/
+dist/
+build/
+
+*.log
+"@ | Out-File -Encoding utf8 .gitignore
