@@ -26,7 +26,7 @@ export default function Login({ setToken }) {
 
   return (
     <div className="form-container">
-      <h2>Login</h2>
+      <h2>Welcome to InfoMedia!</h2>
       <form onSubmit={handleSubmit}>
         <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />
         <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required />
